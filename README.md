@@ -1,17 +1,20 @@
-# project1-sniffer_and_port_detector
-After working on my project, i have updated my NIDS and added some new feature,
-1. After starting "scan_detector.py" on any type of scan, an alert will be sent to your device
-2. I have added feature of notification to it.
-3. This code now tells about the port, destination and source of scan.
-4. This code now create an access log and a blacklist on sniffing a scan.
+Project: Lightweight Packet Sniffer + Port Scan Detector
 
-My main project is "scan_detecter.py". so,"sniffer.py" is same as last time
+Features
+- Live packet sniffing
+- TCP port scan detection
+- Alert logging
+- Desktop notifications
 
-This code only use scapy for port sniffing, for version, you can check requirement.txt
+Requirements
+- Python 3
+- Scapy
 
-Since this code use scapy, root permission is required for running it, use the command as:
+Installation
+pip install -r requirements.txt
 
-sudo python scan_detector.py
+Run
+sudo python3 detector.py
 
 <img width="600" height="189" alt="image" src="https://github.com/user-attachments/assets/97441496-e8b3-44b1-aa58-1f21ea0e5e08" />
                                             img:Sniffer.py
