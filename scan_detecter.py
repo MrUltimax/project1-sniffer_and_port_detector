@@ -1,3 +1,11 @@
+from scapy.all import sniff
+from collections import defaultdict
+import os
+import time
+
+scan_tracker = defaultdict(set)
+scan_time = {}
+alert_time = {}
 
 PORT_SCAN_THRESHOLD = 10
 TIME_WINDOW = 30
