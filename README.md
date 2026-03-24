@@ -64,6 +64,8 @@ MrUltimax
 <h3>Contribute</h3>
 Feel free to fork, improve, and submit pull requests!
 
+<h3>License</h3>
+This project is open-source and available under the MIT License.
 
 <h4>Preview:</h4>
 <img width="1053" height="762" alt="image" src="https://github.com/user-attachments/assets/07c8cb05-857f-456c-857d-6d9d654dbb7e" />
