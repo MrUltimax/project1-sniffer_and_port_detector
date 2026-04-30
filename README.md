@@ -1,77 +1,126 @@
-<h1>Signature-based NIDS/IPS </h1>
-A lightweight Network Intrusion Detection System (NIDS) alongwith Intrusion Prevention System built using Python and Scapy.
-This project monitors real-time network traffic and detects port scanning attacks based on behavioral analysis.
-It also blocks temporarily block the Attacking IP address.
+<h1>Lightweight NIDS/IPS for Port Scan Detection</h1>
 
-<h3>Overview</h3>
+<p>
+A lightweight <b>Network Intrusion Detection and Prevention System (NIDS/IPS)</b> implemented in Python using Scapy.
+This system monitors real-time network traffic, detects suspicious scanning behavior, and automatically blocks malicious IP addresses.
+</p>
 
-This project is designed as a learning and research-oriented NIDS/IPS prototype, focusing on:
+<hr>
 
-- Real-time packet sniffing
-- Detection of suspicious network behavior
-- Blocking the suspicious IP Addresses
-- Lightweight design suitable for IoT environments
+<h2>Overview</h2>
+<p>
+This project is designed as a learning and research-oriented prototype focusing on real-time network monitoring and lightweight security mechanisms,
+particularly for environments with limited resources such as IoT devices.
+</p>
 
-Packet sniffing tools are commonly used in network monitoring to capture and analyze traffic flowing across a network
-
-<h3>Features:</h3>
 <ul>
-<li>Live packet sniffing</li>
-<li>TCP/UDP traffic monitoring</li>
-<li>Port scan detection (threshold-based)</li>
-<li>Slow scan detection (time-window based)</li>
-<li>Desktop notifications for alerts</li>
-<li>Logging of detected attacks</li>
-<li>Behavior-based detection approach</li>
+  <li>Real-time packet sniffing</li>
+  <li>Detection of suspicious network behavior</li>
+  <li>Automatic blocking of malicious IPs</li>
+  <li>Lightweight design</li>
 </ul>
 
+<hr>
 
-<h3>Technologies Used</h3>
-<ul>
-<li>Python 3</li>
-<li>Scapy – packet manipulation and sniffing</li>
-<li>Linux networking tools (for packet capture)</li>
-</ul>
-
-<h3>Installation</h3>
-
-<h4>Clone the repository:</h4>
-git clone https://github.com/MrUltimax/project1-sniffer_and_port_detector
-
-cd project1-sniffer_and_port_detector
-
-<h4>Install dependencies:</h4>
-pip install -r requirements.txt
-
-<h3>Usage</h3>
-<h4>Run the detector (requires root privileges):</h4>
-sudo python3 scan_detector.py
-
-      ⚠️Root access is required because packet sniffing needs permission to capture raw network traffic.
-
-<h3>The system monitors incoming packets and:</h3>
+<h2>How It Works</h2>
 <ol>
-<li>Extracts source IP and destination port</li>
-<li>Tracks unique ports accessed by each IP</li>
-<li>Applies:</li><ul>
-     <li>Threshold detection (number of ports scanned)</li>
-     <li>Time-window analysis (slow scan detection)</li>
-</ul>
-<li>Generates alerts if suspicious behavior is detected</li>
+  <li>Captures packets using Scapy</li>
+  <li>Extracts source IP and destination ports</li>
+  <li>Tracks unique ports accessed per IP</li>
+  <li>Applies detection logic:
+    <ul>
+      <li>Threshold-based detection (fast scans)</li>
+      <li>Time-window analysis (slow scans)</li>
+    </ul>
+  </li>
+  <li>Triggers alerts and blocks attacker IP</li>
 </ol>
 
-<h3>Author</h3>
-MrUltimax
+<hr>
 
-<h3>Contribute</h3>
-Feel free to fork, improve, and submit pull requests!
+<h2>Features</h2>
+<ul>
+  <li>Live packet sniffing</li>
+  <li>TCP/UDP traffic monitoring</li>
+  <li>Port scan detection (threshold-based)</li>
+  <li>Slow scan detection (time-window based)</li>
+  <li>Desktop notifications</li>
+  <li>Attack logging</li>
+  <li>Behavior-based detection approach</li>
+</ul>
 
-<h3>License</h3>
-This project is open-source and available under the MIT License.
+<hr>
 
-<h3>Note</h3>
-This is my first Project and may still contain errors or bugs
+<h2>Technologies Used</h2>
+<ul>
+  <li>Python 3</li>
+  <li>Scapy</li>
+  <li>Plyer</li>
+  <li>Linux Firewall (iptables) / Windows Firewall</li>
+</ul>
 
-<h4>Preview:</h4>
-<img width="1053" height="762" alt="image" src="https://github.com/user-attachments/assets/07c8cb05-857f-456c-857d-6d9d654dbb7e" />
+<hr>
 
+<h2>Installation</h2>
+<pre>
+git clone https://github.com/MrUltimax/project1-sniffer_and_port_detector
+cd project1-sniffer_and_port_detector
+pip install -r requirements.txt
+</pre>
+
+<hr>
+
+<h2>Usage</h2>
+<pre>
+sudo python3 scan_detector.py
+</pre>
+
+<p><b>Note:</b> Root privileges are required to capture network packets.</p>
+
+<hr>
+
+<h2>Detection Logic</h2>
+<ul>
+  <li>Tracks number of unique ports accessed by an IP</li>
+  <li>Analyzes behavior within a time window</li>
+  <li>Triggers alerts when thresholds are exceeded</li>
+</ul>
+
+<hr>
+
+<h2>Limitations</h2>
+<ul>
+  <li>Focused mainly on TCP SYN scans</li>
+  <li>May produce false positives</li>
+  <li>Does not handle advanced evasion techniques</li>
+</ul>
+
+<hr>
+
+<h2>Future Work</h2>
+<ul>
+  <li>Support for UDP and stealth scan detection</li>
+  <li>Machine learning-based anomaly detection</li>
+  <li>Integration with live traffic analyzer dashboard</li>
+  <li>Optimization for IoT environments</li>
+</ul>
+
+<hr>
+
+<h2>Author</h2>
+<p>MrUltimax</p>
+
+<hr>
+
+<h2>Contributing</h2>
+<p>Feel free to fork, improve, and submit pull requests.</p>
+
+<hr>
+
+<h2>License</h2>
+<p>MIT License</p>
+
+<hr>
+
+<h2>📝 Note</h2>
+<p>This is an early-stage project developed for learning and research purposes and may contain bugs.</p>
