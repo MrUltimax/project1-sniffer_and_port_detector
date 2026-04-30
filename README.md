@@ -1,13 +1,15 @@
-<h1>Lightweight Packet Sniffer & Port Scan Detector </h1>
-A lightweight Network Intrusion Detection System (NIDS) built using Python and Scapy.
+<h1>Signature-based NIDS/IPS </h1>
+A lightweight Network Intrusion Detection System (NIDS) alongwith Intrusion Prevention System built using Python and Scapy.
 This project monitors real-time network traffic and detects port scanning attacks based on behavioral analysis.
+It also blocks temporarily block the Attacking IP address.
 
 <h3>Overview</h3>
 
-This project is designed as a learning and research-oriented NIDS prototype, focusing on:
+This project is designed as a learning and research-oriented NIDS/IPS prototype, focusing on:
 
 - Real-time packet sniffing
 - Detection of suspicious network behavior
+- Blocking the suspicious IP Addresses
 - Lightweight design suitable for IoT environments
 
 Packet sniffing tools are commonly used in network monitoring to capture and analyze traffic flowing across a network
@@ -66,6 +68,9 @@ Feel free to fork, improve, and submit pull requests!
 
 <h3>License</h3>
 This project is open-source and available under the MIT License.
+
+<h3>Note</h3>
+This is my first Project and may still contain errors or bugs
 
 <h4>Preview:</h4>
 <img width="1053" height="762" alt="image" src="https://github.com/user-attachments/assets/07c8cb05-857f-456c-857d-6d9d654dbb7e" />
